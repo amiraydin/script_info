@@ -1,0 +1,110 @@
+ul {
+    list-style: none;
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 5px;
+    padding-left: 20px;
+}
+
+/* 
+ul li.folder {
+    font-weight: bold;
+} */
+
+/* Remove default bullets */
+ul,
+#myUL {
+    list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the caret/arrow */
+span.caret {
+    cursor: pointer;
+    user-select: none;
+    transition: all .3s ease-in-out;
+    /* Prevent text selection */
+}
+
+span.caret:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 150px #dfdfdf;
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+    /* content: "\25B6"; */
+    content: "\❆";
+    /* content: "\+"; */
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+    transform: rotate(90deg);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.8s;
+    animation-name: animatetop;
+    animation-duration: 0.8s
+}
+
+/* Hide the nested list */
+.nested {
+    display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+    display: block;
+}
+
+/* search icon  */
+.search_parent {
+    position: sticky;
+    top: 0;
+}
+
+.sicon_list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 8px 4px 4px;
+    margin: 0;
+    cursor: pointer;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: 50px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: 50px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
